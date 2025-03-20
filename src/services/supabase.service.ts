@@ -1,5 +1,5 @@
 import { createClient } from '@supabase/supabase-js';
-import { env } from '../env';
+import { env } from '../config/env';
 import { generateShortCode } from '../helpers';
 import { SupabaseService } from '../types/Supabase';
 
