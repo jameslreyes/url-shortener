@@ -1,5 +1,5 @@
 import express, { Request, Response } from 'express'
-import { env } from './env';
+import { env } from './config/env';
 import { urlController } from './controllers/shorten.controller';
 
 const app = express();
