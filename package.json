@@ -1,0 +1,23 @@
+{
+  "name": "url-shortener",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.1",
+    "@types/express": "^5.0.1",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "nodemon": "^3.1.9"
+  },
+  "overrides": {
+    "whatwg-url": "^14.0.0"
+  }
+}
