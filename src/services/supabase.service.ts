@@ -1,13 +1,13 @@
 import { createClient } from '@supabase/supabase-js';
 import { env } from '../config/env';
-import { generateShortCode } from '../helpers';
-import { SupabaseService } from '../types/Supabase';
+import { SupabaseService } from '../types/_index';
+import { helpers } from '../helpers';
 
 const supabaseClient = createClient(env.supabase.url, env.supabase.anonKey);
 
 export const supabase: SupabaseService = {
   shortenUrl: async (longUrl: string): Promise<string> => {
-    const shortCode = generateShortCode();
+    const shortCode = helpers.generateShortCode();
     const { error } = await supabaseClient
       .from('urls')
       .insert([{ short_code: shortCode, long_url: longUrl }]);

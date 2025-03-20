@@ -1,5 +1,5 @@
 import dotenv from "dotenv"
-import { Env } from "../types/Env";
+import { Env } from "../types/_index";
 dotenv.config();
 
 export const env: Env = {
