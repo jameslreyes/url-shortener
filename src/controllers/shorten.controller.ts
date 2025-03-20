@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { supabase } from "../services/supabase.service";
-import { UrlController } from "../types/Controllers";
+import { UrlController } from "../types/_index";
 
 export const urlController: UrlController = {
   shorten: async (req: Request, res: Response): Promise<void> => {
