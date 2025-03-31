@@ -1,6 +1,6 @@
 # URL Shortener
 
-A modern, scalable URL shortener service built with Node.js, Express, TypeScript, and Supabase.
+A lightweight and efficient URL shortening service with click analytics tracking. Built with TypeScript for type safety and Supabase for data persistence. Features hot reloading, colored logging, and health monitoring.
 
 ## Features
 
