@@ -11,7 +11,7 @@ export const requiredEnvVars = [
 
 export const env: Env = {
   nodeEnv: process.env.NODE_ENV || '',
-  port: process.env.PORT || '',
+  port: process.env.PORT || '3000',
   supabase: {
     url: process.env.SUPABASE_URL || '',
     anonKey: process.env.SUPABASE_ANON_KEY || ''
