@@ -136,3 +136,7 @@ url-shortener
 ├─ package.json                     # Project dependencies
 └─ tsconfig.json                    # TypeScript configuration
 ```
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
