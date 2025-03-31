@@ -1,6 +1,6 @@
 import { setupCustomLogging } from "./config/logger";
-import { env, requiredEnvVars } from "./config/env";
-setupCustomLogging(env.nodeEnv === 'development')
+import { config, requiredEnvVars } from "./config/env";
+setupCustomLogging(config.app.environment === 'development')
 import app from "./app";
 import { isConfigValid } from "./helpers/env";
 
@@ -9,8 +9,8 @@ const startServer = () => {
     process.exit(1);
   };
 
-  app.listen(env.port, () => {
-    console.log(`Server is listening on port ${env.port}`)
+  app.listen(config.app.port, () => {
+    console.log(`Server is listening on port ${config.app.port}`)
   });
 };
 

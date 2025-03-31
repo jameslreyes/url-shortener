@@ -30,7 +30,7 @@ const formatLog = (type: string, message: string): string => {
     log: 6, info: 5, success: 2, debug: 4, warn: 5, error: 4,
   };
   const dashes: string = '-'.repeat(dashCount[type]);
-  const timestamp = new Date().toLocaleString('en-US', {
+  const timestamp: string = new Date().toLocaleString('en-US', {
     timeZone: 'America/New_York',
     hour: '2-digit',
     minute: '2-digit',

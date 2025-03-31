@@ -1,17 +1,19 @@
 import dotenv from "dotenv"
-import { Env } from "../types/Env";
+import { Config } from "../types/Env";
 dotenv.config();
 
-export const requiredEnvVars = [
+export const requiredEnvVars: string[] = [
   'NODE_ENV',
   'PORT',
   'SUPABASE_URL',
   'SUPABASE_ANON_KEY'
 ]
 
-export const env: Env = {
-  nodeEnv: process.env.NODE_ENV || '',
-  port: process.env.PORT || '3000',
+export const config: Config = {
+  app: {
+    environment: process.env.NODE_ENV || '',
+    port: process.env.PORT || '3000',
+  },
   supabase: {
     url: process.env.SUPABASE_URL || '',
     anonKey: process.env.SUPABASE_ANON_KEY || ''

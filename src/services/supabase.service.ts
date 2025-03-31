@@ -1,8 +1,8 @@
 import { createClient } from '@supabase/supabase-js';
-import { env } from '../config/env';
+import { config } from '../config/env';
 import { helpers } from '../helpers';
 
-const supabaseClient = createClient(env.supabase.url, env.supabase.anonKey);
+const supabaseClient = createClient(config.supabase.url, config.supabase.anonKey);
 
 export const supabase = {
   shortenUrl: async (longUrl: string): Promise<string> => {

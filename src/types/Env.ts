@@ -3,8 +3,12 @@ type Supabase = {
   anonKey: string;
 }
 
-export interface Env {
-  nodeEnv: string;
+type App = {
+  environment: string;
   port: string;
+}
+
+export interface Config {
+  app: App;
   supabase: Supabase;
 }
