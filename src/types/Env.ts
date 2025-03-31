@@ -4,6 +4,7 @@ type Supabase = {
 }
 
 export interface Env {
+  nodeEnv: string;
   port: string;
   supabase: Supabase;
 }

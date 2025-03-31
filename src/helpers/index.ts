@@ -1,7 +1,6 @@
 import crypto from 'crypto';
-import { Helpers } from '../types/_index';
 
-export const helpers: Helpers = {
+export const helpers = {
   generateShortCode: (): string => {
     return crypto.randomBytes(3).toString('hex');
   }

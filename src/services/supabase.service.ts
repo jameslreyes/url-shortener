@@ -1,11 +1,10 @@
 import { createClient } from '@supabase/supabase-js';
 import { env } from '../config/env';
-import { SupabaseService } from '../types/_index';
 import { helpers } from '../helpers';
 
 const supabaseClient = createClient(env.supabase.url, env.supabase.anonKey);
 
-export const supabase: SupabaseService = {
+export const supabase = {
   shortenUrl: async (longUrl: string): Promise<string> => {
     const shortCode = helpers.generateShortCode();
     const { error } = await supabaseClient
