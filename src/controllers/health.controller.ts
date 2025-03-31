@@ -1,7 +1,6 @@
 import { Request, Response } from "express";
-import { HealthController } from "../types/_index";
 
-export const healthController: HealthController = {
+export const healthController = {
   checkHealth: async (req: Request, res: Response): Promise<void> => {
     res.status(200).json({
       status: 'healthy',

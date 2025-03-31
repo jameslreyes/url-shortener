@@ -1,8 +1,7 @@
 import { Request, Response } from "express";
 import { supabase } from "../services/supabase.service";
-import { UrlController } from "../types/_index";
 
-export const urlController: UrlController = {
+export const urlController = {
   shorten: async (req: Request, res: Response): Promise<void> => {
     const { longUrl } = req.body;
     const response = await supabase.shortenUrl(longUrl);
